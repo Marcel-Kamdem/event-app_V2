@@ -11,7 +11,12 @@ const sun = document.querySelector(".sun") as HTMLElement;
 /*
 *  Overlay humberger button
 **/ 
-ham.addEventListener("click",()=>{
+hamLight.addEventListener("click",()=>{
+    offScreen.classList.add('on');
+    overlay.style.display = "block";
+} );
+
+hamDark.addEventListener("click",()=>{
     offScreen.classList.add('on');
     overlay.style.display = "block";
 } );

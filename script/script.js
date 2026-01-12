@@ -10,7 +10,11 @@ var sun = document.querySelector(".sun");
 /*
 *  Overlay humberger button
 **/
-ham.addEventListener("click", function () {
+hamLight.addEventListener("click", function () {
+    offScreen.classList.add('on');
+    overlay.style.display = "block";
+});
+hamDark.addEventListener("click", function () {
     offScreen.classList.add('on');
     overlay.style.display = "block";
 });
