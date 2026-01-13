@@ -101,8 +101,11 @@ nav{
     display: none;
 }
 
-.dark-ham{
-    display: none;
+.ham{
+    rect{
+         fill: var(--text);
+    }
+    cursor: pointer;
 }
 
 .logo{

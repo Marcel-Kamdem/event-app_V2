@@ -1,6 +1,4 @@
 const ham = document.querySelector(".ham") as HTMLElement;
-const hamLight = document.querySelector(".light-ham") as HTMLElement;
-const hamDark = document.querySelector(".dark-ham") as HTMLElement;
 const offScreen = document.querySelector(".off-screen-menu") as HTMLElement;
 const body = document.querySelector("body") as HTMLElement;
 const overlay = document.querySelector(".overlay") as HTMLElement;
@@ -14,15 +12,11 @@ const inscriptionForm = document.querySelector(".inscription-form") as HTMLEleme
 /*
 *  Overlay humberger button
 **/ 
-hamLight.addEventListener("click",()=>{
+ham.addEventListener("click",()=>{
     offScreen.classList.add('on');
     overlay.style.display = "block";
 } );
 
-hamDark.addEventListener("click",()=>{
-    offScreen.classList.add('on');
-    overlay.style.display = "block";
-} );
 
 //fermer le off screen menu lorsque l'on clique hors de la div
 overlay.addEventListener("click",()=>{
@@ -38,20 +32,12 @@ sun.addEventListener("click", ()=>{
     body.classList.add("theme-light");
     sun.style.display = "none";
     moon.style.display = "block";
-    if(window.innerWidth < 500){
-        hamLight.style.display = "none";
-        hamDark.style.display= "block";
-    }
 })
 
 moon.addEventListener("click", ()=>{
     body.classList.remove("theme-light");
-    sun.style.display = "block";
     moon.style.display = "none";
-    if (window.innerWidth < 500) {
-        hamLight.style.display = "block";
-        hamDark.style.display= "none";
-    }
+    sun.style.display = "block";
 })
 
 

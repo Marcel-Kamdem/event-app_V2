@@ -1,6 +1,4 @@
 var ham = document.querySelector(".ham");
-var hamLight = document.querySelector(".light-ham");
-var hamDark = document.querySelector(".dark-ham");
 var offScreen = document.querySelector(".off-screen-menu");
 var body = document.querySelector("body");
 var overlay = document.querySelector(".overlay");
@@ -13,11 +11,7 @@ var inscriptionForm = document.querySelector(".inscription-form");
 /*
 *  Overlay humberger button
 **/
-hamLight.addEventListener("click", function () {
-    offScreen.classList.add('on');
-    overlay.style.display = "block";
-});
-hamDark.addEventListener("click", function () {
+ham.addEventListener("click", function () {
     offScreen.classList.add('on');
     overlay.style.display = "block";
 });
@@ -34,19 +28,11 @@ sun.addEventListener("click", function () {
     body.classList.add("theme-light");
     sun.style.display = "none";
     moon.style.display = "block";
-    if (window.innerWidth < 500) {
-        hamLight.style.display = "none";
-        hamDark.style.display = "block";
-    }
 });
 moon.addEventListener("click", function () {
     body.classList.remove("theme-light");
-    sun.style.display = "block";
     moon.style.display = "none";
-    if (window.innerWidth < 500) {
-        hamLight.style.display = "block";
-        hamDark.style.display = "none";
-    }
+    sun.style.display = "block";
 });
 /**
  * categories selectionner
