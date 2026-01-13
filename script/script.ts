@@ -7,6 +7,7 @@ const overlay = document.querySelector(".overlay") as HTMLElement;
 const themeButtun = document.querySelector(".theme-btn") as HTMLElement;
 const moon = document.querySelector(".moon") as HTMLElement;
 const sun = document.querySelector(".sun") as HTMLElement;
+const categories = document.querySelectorAll(".categories div");
 
 /*
 *  Overlay humberger button
@@ -49,3 +50,19 @@ moon.addEventListener("click", ()=>{
         hamDark.style.display= "none";
     }
 })
+
+
+/**
+ * categories selectionner
+ */
+
+categories.forEach(div =>{
+    div.addEventListener("click", ()=>{
+        let actuel = document.querySelector(".categories .active");
+
+        if(actuel){
+            actuel.classList.remove("active");
+        }
+        div.classList.add("active");
+    });
+});

@@ -172,6 +172,7 @@ nav{
 
 .btn-categorie.active{
     background-color: var(--primary);
+    order: -1;
 }
 
 @media only screen and (min-width: 500px) {

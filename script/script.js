@@ -7,6 +7,7 @@ var overlay = document.querySelector(".overlay");
 var themeButtun = document.querySelector(".theme-btn");
 var moon = document.querySelector(".moon");
 var sun = document.querySelector(".sun");
+var categories = document.querySelectorAll(".categories div");
 /*
 *  Overlay humberger button
 **/
@@ -43,4 +44,16 @@ moon.addEventListener("click", function () {
         hamLight.style.display = "block";
         hamDark.style.display = "none";
     }
+});
+/**
+ * categories selectionner
+ */
+categories.forEach(function (div) {
+    div.addEventListener("click", function () {
+        var actuel = document.querySelector(".categories .active");
+        if (actuel) {
+            actuel.classList.remove("active");
+        }
+        div.classList.add("active");
+    });
 });
