@@ -24,6 +24,7 @@
     --h1: bold 1.5rem/1.2rem var(--ff);
     --h2: bold 1.25rem/1.2rem var(--ff);
     --h3: bold 1rem/1.2rem var(--ff);
+    --h4: bold 1.125rem/1rem var(--ff);
     --logo: bold 1.25rem/1.2rem var(--ff);
     --pBold: bold 1rem/1.5rem var(--ff);
 
@@ -64,6 +65,16 @@ h1{
 .container{
     margin: 2rem auto;
     max-width: min(90vw, 1020px);
+}
+
+input{
+    background-color: var(--bg-light);
+    border: none;
+    height: 25px;
+    border-radius: 4px;
+    margin: 4px 0;
+    color: var(--text);
+    padding: 3px 10px;
 }
 
 /* style */
@@ -175,6 +186,94 @@ nav{
     order: -1;
 }
 
+/* events */
+.event{
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.event:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+.event-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-Title{
+    font: var(--h4);
+}
+
+.event-date{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    font: var(--text);
+    background-color: var(--bg-light);
+    padding: .125rem 1rem;
+}
+
+.event-description{
+    font: var(--text);
+}
+
+.event-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* formulaire d'inscription */
+.inscription-form{
+    background-color: var(--bg);
+    position: fixed;
+    bottom: -70vh;
+    right: 0;
+    height: 50vh;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    transition: .3s ease-in;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.inscription-form_title{
+    font: var(--h4);
+    margin-bottom: .25rem;
+}
+
+.inscription-form_text{
+    color: var(--text-muted);
+}
+
+.formulaire_inscription{
+    display: flex;
+    flex-direction: column;
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.inscription-form.selected{
+    bottom: 0;
+}
+
 @media only screen and (min-width: 500px) {
     nav{
          display: flex;
@@ -185,5 +284,41 @@ nav{
         display: none;
     }
 
+    .inscription-form{
+        display: none;
+        background-color: var(--bg);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-width: 80vw;
+        border-radius: 1rem;
+        transition: .3s ease-in;
+        z-index: 3;
+        justify-content: center;
+        
+    }
+
+    .inscription-form_description{
+        text-align: center;
+    }
+
+    .formulaire_inscription{
+        display: flex;
+       div{
+        display: flex;
+        min-width: 380px;
+        margin: 0 auto;
+       }
+        
+    }
+    .validation{
+        display: flex;
+        justify-content: center;
+    }
+
+    .inscription-form.selected{
+        display: flex;
+    }
     
 }

@@ -8,6 +8,8 @@ const themeButtun = document.querySelector(".theme-btn") as HTMLElement;
 const moon = document.querySelector(".moon") as HTMLElement;
 const sun = document.querySelector(".sun") as HTMLElement;
 const categories = document.querySelectorAll(".categories div");
+const evenements = document.querySelectorAll(".events div");
+const inscriptionForm = document.querySelector(".inscription-form") as HTMLElement;
 
 /*
 *  Overlay humberger button
@@ -25,6 +27,7 @@ hamDark.addEventListener("click",()=>{
 //fermer le off screen menu lorsque l'on clique hors de la div
 overlay.addEventListener("click",()=>{
         offScreen.classList.remove('on');
+        inscriptionForm.classList.remove("selected");
         overlay.style.display = "none";
 });
 
@@ -66,3 +69,15 @@ categories.forEach(div =>{
         div.classList.add("active");
     });
 });
+
+/** 
+ * Apparition fiche d'inscription
+ * */ 
+
+evenements.forEach(div =>{
+        div.addEventListener("click", ()=>{
+        inscriptionForm.classList.add("selected");
+        overlay.style.display = "block";
+    });
+});
+
