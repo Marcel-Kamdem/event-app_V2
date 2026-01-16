@@ -2,12 +2,8 @@ var ham = document.querySelector(".ham");
 var offScreen = document.querySelector(".off-screen-menu");
 var body = document.querySelector("body");
 var overlay = document.querySelector(".overlay");
-var themeButtun = document.querySelector(".theme-btn");
 var moon = document.querySelector(".moon");
 var sun = document.querySelector(".sun");
-var categories = document.querySelectorAll(".categories div");
-var evenements = document.querySelectorAll(".events div");
-var inscriptionForm = document.querySelector(".inscription-form");
 // Admin
 var addEvenementForm = document.querySelector(".creation-form");
 var addbtn = document.querySelector(".add");
@@ -21,7 +17,7 @@ ham.addEventListener("click", function () {
 //fermer le off screen menu lorsque l'on clique hors de la div
 overlay.addEventListener("click", function () {
     offScreen.classList.remove('on');
-    inscriptionForm.classList.remove("selected");
+    addEvenementForm.classList.remove("selected");
     overlay.style.display = "none";
 });
 /*
@@ -37,28 +33,6 @@ moon.addEventListener("click", function () {
     moon.style.display = "none";
     sun.style.display = "block";
 });
-/**
- * categories selectionner
- */
-categories.forEach(function (div) {
-    div.addEventListener("click", function () {
-        var actuel = document.querySelector(".categories .active");
-        if (actuel) {
-            actuel.classList.remove("active");
-        }
-        div.classList.add("active");
-    });
-});
-/**
- * Apparition fiche d'inscription
- * */
-evenements.forEach(function (div) {
-    div.addEventListener("click", function () {
-        inscriptionForm.classList.add("selected");
-        overlay.style.display = "block";
-    });
-});
-// Admin
 addbtn.addEventListener("click", function () {
     addEvenementForm.classList.add("selected");
     overlay.style.display = "block";

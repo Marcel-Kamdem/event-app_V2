@@ -67,7 +67,7 @@ h1{
     max-width: min(90vw, 1020px);
 }
 
-input{
+input,textarea,select{
     background-color: var(--bg-light);
     border: none;
     height: 25px;
@@ -76,6 +76,14 @@ input{
     color: var(--text);
     padding: 3px 10px;
 }
+
+#description, textarea{
+    display: block;
+    height: 140px;
+    width: 100% !important;
+    resize: none;
+}
+
 
 /* style */
 .header,.navigation{
@@ -277,6 +285,53 @@ nav{
     bottom: 0;
 }
 
+
+/* ADMIN.HTML */
+.events-managements{
+    margin-top: 32px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.event-manage{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--bg);
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    gap: 80px;
+    width: 300px;
+}
+
+
+    /* Formulaire creer un evenement */
+/* formulaire de creation */
+.creation-form{
+    background-color: var(--bg);
+    position: fixed;
+    bottom: -80vh;
+    right: 0;
+    height: 80vh;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    transition: .3s ease-in;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.creation-form.selected{
+    bottom: 0;
+}
+
+
 @media only screen and (min-width: 500px) {
     nav{
          display: flex;
@@ -298,11 +353,12 @@ nav{
         border-radius: 1rem;
         transition: .3s ease-in;
         z-index: 3;
-        justify-content: center;
-        
+        justify-content: center; 
     }
 
-    .inscription-form_description{
+
+
+    .inscription-form_description,.creation-form_text,.creation-form_title{
         text-align: center;
     }
 
@@ -320,8 +376,35 @@ nav{
         justify-content: center;
     }
 
-    .inscription-form.selected{
+    .inscription-form.selected,.creation-form.selected{
         display: flex;
     }
-    
+
+    /* admin */
+    .creation-form{
+        display: none;
+        top: 50%;
+        left: 50%;
+        height: 95vh;
+        border-radius: 1rem;
+        transform: translate(-50%,-50%);
+        max-width: 80vw;
+        justify-content: center;
+    }
+
+
+    form div{
+        width: 100%;
+        max-width: 900px;
+    }
+
+}
+
+@media only screen and (min-width: 1045px){
+    /* Admin.html */
+    .events-managements{
+        gap: 22px;
+    }
+
+
 }
