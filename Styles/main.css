@@ -79,7 +79,7 @@ input,textarea,select{
 
 #description, textarea{
     display: block;
-    height: 140px;
+    height: 90px;
     width: 100% !important;
     resize: none;
 }
@@ -281,6 +281,8 @@ nav{
     }
 }
 
+
+
 .inscription-form.selected{
     bottom: 0;
 }
@@ -309,12 +311,13 @@ nav{
 
     /* Formulaire creer un evenement */
 /* formulaire de creation */
-.creation-form{
+.creation-form,.update-form,.delete-form
+{
     background-color: var(--bg);
     position: fixed;
-    bottom: -80vh;
+    bottom: -90vh;
     right: 0;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     border-radius: 1rem 1rem 0 0;
     transition: .3s ease-in;
@@ -327,7 +330,23 @@ nav{
     gap: 1.5rem;
 }
 
-.creation-form.selected{
+div.update-form,
+div.delete-form{
+    height: 50vh;
+}
+
+.formulaire_creation,
+.formulaire_suppression,
+.formulaire_modification{
+    display: flex;
+    flex-direction: column;
+     div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.creation-form.selected,.update-form.selected,.delete-form.selected{
     bottom: 0;
 }
 
@@ -342,7 +361,7 @@ nav{
         display: none;
     }
 
-    .inscription-form{
+    .inscription-form,.update-form{
         display: none;
         background-color: var(--bg);
         position: fixed;
@@ -358,13 +377,19 @@ nav{
 
 
 
-    .inscription-form_description,.creation-form_text,.creation-form_title{
+    .inscription-form_description,
+    .creation-form_description,
+    .update-form-description,
+    .delete-form-description{
         text-align: center;
     }
 
-    .formulaire_inscription{
+    .formulaire_inscription,
+    .formulaire_creation,
+    .formulaire_suppression,
+    .formulaire_modification{
         display: flex;
-       div{
+    div{
         display: flex;
         min-width: 380px;
         margin: 0 auto;
@@ -376,12 +401,18 @@ nav{
         justify-content: center;
     }
 
-    .inscription-form.selected,.creation-form.selected{
+    .inscription-form.selected,
+    .creation-form.selected,
+    .delete-form.selected,
+    .update-form.selected,
+    .delete-form.selected{
         display: flex;
     }
 
     /* admin */
-    .creation-form{
+    .creation-form,
+    .delete-form,
+    .update-form{
         display: none;
         top: 50%;
         left: 50%;

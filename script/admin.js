@@ -6,7 +6,11 @@ var moon = document.querySelector(".moon");
 var sun = document.querySelector(".sun");
 // Admin
 var addEvenementForm = document.querySelector(".creation-form");
+var updateEvenementForm = document.querySelector(".update-form");
+var deleteEventForm = document.querySelector(".delete-form");
 var addbtn = document.querySelector(".add");
+var updateBtn = document.querySelector(".update");
+var deleteBtn = document.querySelector(".delete");
 /*
 *  Overlay humberger button
 **/
@@ -18,6 +22,8 @@ ham.addEventListener("click", function () {
 overlay.addEventListener("click", function () {
     offScreen.classList.remove('on');
     addEvenementForm.classList.remove("selected");
+    updateEvenementForm.classList.remove("selected");
+    deleteEventForm.classList.remove("selected");
     overlay.style.display = "none";
 });
 /*
@@ -35,5 +41,13 @@ moon.addEventListener("click", function () {
 });
 addbtn.addEventListener("click", function () {
     addEvenementForm.classList.add("selected");
+    overlay.style.display = "block";
+});
+updateBtn.addEventListener("click", function () {
+    updateEvenementForm.classList.add("selected");
+    overlay.style.display = "block";
+});
+deleteBtn.addEventListener("click", function () {
+    deleteEventForm.classList.add("selected");
     overlay.style.display = "block";
 });

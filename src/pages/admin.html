@@ -43,19 +43,19 @@
             <p>Ici manager vos evenements : Ajouter, Modifiez et supprimez</p>
 
             <div class="events-managements">
-                <div class="event-manage add">
+                <div class="event-manage">
                     <h4>Creer un Evenement</h4>
                     <div class="btn add">Add</div>
                 </div>
 
-                <div class="event-manage modify">
+                <div class="event-manage">
                     <h4>Modifier un Evenement</h4>
-                    <div class="btn">Update</div>
+                    <div class="btn update">Update</div>
                 </div>
 
-                <div class="event-manage delete">
+                <div class="event-manage">
                     <h4>Supprimer un Evenement</h4>
-                    <div class="btn">Delete</div>
+                    <div class="btn delete">Delete</div>
                 </div>
             </div>
 
@@ -66,13 +66,13 @@
                     <h4 class="creation-form_title">Creer un evenement</h4>
                     <p class="creation-form_text">Creer un moment inoubliable</p>
                 </div> 
-                <div class="inscription-form_form">
-                    <form action="" method="get" class="formulaire_inscription">
-                        <div class="nom">
-                            <label for="name">Titre</label>
+                <div class="creation-form_form">
+                    <form action="" method="get" class="formulaire_creation">
+                        <div class="title">
+                            <label for="title">Titre</label>
                             <input type="text" name="title" id="title" required>
                         </div>
-                        <div class="categorie"><!--a modifier categorie : liste-->
+                        <div class="categorie">
                             <label for="categorie">categorie</label>
                             <select name="categorie" id="categorie" required>
                                 <option value="Conference">Conference</option>
@@ -105,6 +105,46 @@
                     <div class="btn">Ajouter</div>
                 </div> 
              </div>
+
+             <!-- Update form -->
+              <div class="update-form">
+                <div class="update-form-description">
+                    <h4 class="update-form-form_title">Modifier un evenement</h4>
+                    <p class="update-form-form_text">Des modification ? Allez y nous sommes la</p>
+                </div> 
+                <div class="update-form_form">
+                    <form action="" method="get" class="formulaire_modification">
+                        <div class="title">
+                            <label for="title">Titre</label>
+                            <input type="text" name="title" id="title" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="validation">
+                    <div class="btn">Update</div>
+                 </div> 
+             </div>
+
+             <!-- delete form -->
+              <div class="delete-form">
+                  <div class="delete-form-description">
+                      <h4 class="delete-form-form_title">Supprimer un evenement</h4>
+                      <p class="delete-form-form_text">Supprimer un moment l’avenir est devant</p>
+                  </div> 
+
+                  <div class="delete-form_form">
+                    <form action="" method="get" class="formulaire_suppression">
+                        <div class="title">
+                            <label for="title">Titre</label>
+                            <input type="text" name="title" id="title" required>
+                        </div>
+                    </form>
+                  </div>
+
+                  <div class="validation">
+                      <div class="btn">delete</div>
+                  </div> 
+              </div>
         </main>
 
     </div>
