@@ -62,6 +62,11 @@ h1{
     margin-bottom: var(--margin2);
 }
 
+h4{
+    font: var(--h4);
+    margin-bottom: .25rem;
+}
+
 .container{
     margin: 2rem auto;
     max-width: min(90vw, 1020px);
@@ -263,10 +268,7 @@ nav{
     gap: 1.5rem;
 }
 
-.inscription-form_title{
-    font: var(--h4);
-    margin-bottom: .25rem;
-}
+
 
 .inscription-form_text{
     color: var(--text-muted);
