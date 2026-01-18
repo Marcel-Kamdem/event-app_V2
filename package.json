@@ -1,0 +1,21 @@
+{
+  "name": "event-app_v2",
+  "version": "1.0.0",
+  "description": "App web de gestion d'évènement (SPORT, CONFERENCE, ATELIER, Autre...)",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcel-Kamdem/event-app_V2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcel-Kamdem/event-app_V2/issues"
+  },
+  "homepage": "https://github.com/Marcel-Kamdem/event-app_V2#readme"
+}
